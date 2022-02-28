@@ -10,16 +10,16 @@ namespace TesteTecnico.Models
     [Table("Personagem")]
     public class Personagem
     {
-        [Display(Description = "Id")]
+        [Display(Name = "ID", Description = "Id")]
         [Column("Id")]
         public int id { get; set; }
-        [Display(Description = "Personagem")]
+        [Display(Name = "PERSONAGEM", Description = "Personagem")]
         [Column("Personagem")]
         public string personagem { get; set; }
-        [Display(Description = "Filme")]
+        [Display(Name = "FILME", Description = "Filme")]
         [Column("Filme")]
         public string filme { get; set; }
-        [Display(Description = "Cenário")]
+        [Display(Name = "CENÁRIO", Description = "Cenário")]
         [Column("Cenario")]
         public string cenario { get; set; }
     }
