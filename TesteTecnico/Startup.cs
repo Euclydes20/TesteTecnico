@@ -25,7 +25,7 @@ namespace TesteTecnico
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Conteudo>(option => option.UseMySql(Configuration.GetConnectionString("DefaultConnection"), new MySqlServerVersion(new Version(8, 0, 28))));
+            services.AddDbContext<Conteudo>(option => option.UseMySql(Configuration.GetConnectionString("LocalConnection"), new MySqlServerVersion(new Version(8, 0, 28))));
             services.AddControllersWithViews();
         }
 
