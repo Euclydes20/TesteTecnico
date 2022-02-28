@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TesteTecnico.Models.Personagem>
+
+@{
+    ViewData["Title"] = "Teste Técnico";
+}
+
+<h1>Teste Técnico - CRUD ASP.NET CORE</h1>
+
+<p>
+    <a asp-action="Create">Criar Novo Personagem</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id).ToUpper()
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.personagem).ToUpper()
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.filme).ToUpper()
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cenario).ToUpper()
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.personagem)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.filme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cenario)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Update", new { id = item.id /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Detalhes", "Read", new { id = item.id /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Deletar", "Delete", new { id = item.id /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

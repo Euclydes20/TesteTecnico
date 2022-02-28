@@ -1,0 +1,43 @@
+﻿@model TesteTecnico.Models.Personagem
+
+@{
+    ViewData["Title"] = "Criar Personagem";
+}
+
+<h1>Criar</h1>
+
+<h4>Personagem</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="personagem" class="control-label">Personagem</label>
+                <input asp-for="personagem" class="form-control" />
+                <span asp-validation-for="personagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="filme" class="control-label">Filme</label>
+                <input asp-for="filme" class="form-control" />
+                <span asp-validation-for="filme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cenario" class="control-label">Cenário</label>
+                <input asp-for="cenario" class="form-control" />
+                <span asp-validation-for="cenario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar ao Início</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
