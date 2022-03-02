@@ -37,12 +37,12 @@ namespace TesteTecnico.Controllers
         [HttpGet]
         public IActionResult Read(int id)
         {
-            return View(conteudo.personagem.Find(id));
+            return View(this.conteudo.personagem.Find(id));
         }
         [HttpGet]
         public IActionResult Update(int id)
         {
-            return View(conteudo.personagem.Find(id));
+            return View(this.conteudo.personagem.Find(id));
         }
         [HttpPost]
         public IActionResult Update(Personagem personagem2)
