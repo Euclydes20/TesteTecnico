@@ -42,10 +42,6 @@ namespace TesteTecnico.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
-            if(conteudo.personagem.Find(id) != null)
-            {
-
-            }
             return View(conteudo.personagem.Find(id));
         }
         [HttpPost]
